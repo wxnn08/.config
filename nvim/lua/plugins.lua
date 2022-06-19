@@ -28,8 +28,14 @@ return require('packer').startup(function()
 
 	use {'marko-cerovac/material.nvim'}
 	use {'shaeinst/roshnivim-cs'}
-
+	use {'rafamadriz/neon'}
+	use {'windwp/nvim-ts-autotag'}
+	use {'akinsho/flutter-tools.nvim', requires = 'nvim-lua/plenary.nvim'}
+	
 	require("telescope").load_extension "file_browser"
 	require('feline').setup()
 	require('material').setup()
+	require('nvim-ts-autotag').setup()
+	require("flutter-tools").setup{} -- use defaults
+
 end)
