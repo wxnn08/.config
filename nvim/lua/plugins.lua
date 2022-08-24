@@ -30,6 +30,7 @@ return require('packer').startup(function()
 	use {'rafamadriz/neon'}
 	use {'windwp/nvim-ts-autotag'}
 	use {'akinsho/flutter-tools.nvim', requires = 'nvim-lua/plenary.nvim'}
+	use {'vimwiki/vimwiki'}
 	
 	require("telescope").load_extension "file_browser"
 	require('material').setup()
