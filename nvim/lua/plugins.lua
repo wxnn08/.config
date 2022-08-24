@@ -22,7 +22,6 @@ return require('packer').startup(function()
 	use {
 		'kyazdani42/nvim-tree.lua',
 		requires = { 'kyazdani42/nvim-web-devicons' },
-		config = function() require'nvim-tree'.setup {} end
 	}
 	use { 'f-person/git-blame.nvim' }
 
@@ -33,9 +32,10 @@ return require('packer').startup(function()
 	use {'akinsho/flutter-tools.nvim', requires = 'nvim-lua/plenary.nvim'}
 	
 	require("telescope").load_extension "file_browser"
-	require('feline').setup()
 	require('material').setup()
 	require('nvim-ts-autotag').setup()
 	require("flutter-tools").setup{} -- use defaults
+	require('nvim-tree').setup()
+	require('feline').setup()
 
 end)

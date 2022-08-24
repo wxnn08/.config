@@ -13,7 +13,8 @@ input "1267:12710:ELAN0406:00_04F3:31A6_Touchpad" {
     # pointer_accel 1
 }
 
-input * xkb_layout "us(altgr-intl)"
+input * xkb_layout "us(intl)"
+#input * xkb_layout "br"
 
 bindsym $mod+Return exec kitty
 
@@ -143,7 +144,7 @@ set $mediumgrey     #8b8b8b
 set $yellowbrown    #e1b700
 
 #class                  border          bg          text        indicator       child border
-client.focused          $mediumgrey     $darkgrey   $white      $grey           $mediumgrey
+client.focused          $mediumgrey     $darkgrey   $white      $grey           $white
 client.unfocused        $black          $black      $grey       $black          $black
 client.focused_inactive $darkblue       $darkblue   $grey       $black          $black
 client.urgent           $urgentred      $urgentred  $white      $yellowbrown    $yellowbrown
@@ -179,7 +180,7 @@ bindsym XF86AudioPrev   exec playerctl previous
 bindsym Mod1+comma      exec playerctl previous
 
 # borders
-default_border pixel 1
+default_border pixel 2
 #for_window [class="^.*"] border pixel 0
 #for_window [app_id="firefox"] border none
 gaps inner 10
